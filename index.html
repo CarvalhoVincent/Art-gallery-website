@@ -7,20 +7,31 @@
     <meta name="description" content="art gallery website - Home page">
 
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700;800;900&family=Outfit:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+
     <title>Frontend Mentor | Art gallery website</title>
 </head>
 
 <body>
+    <div class="black-rectangle"></div>
+    <img id="image-hero" src="./assets/desktop/image-hero.jpg" alt="people walking in gallery">
+    <header class="header">
+        <div class="top flex">
+            <div class="top-left">
+                <h1 class="ff-shoulders fs-900 uppercase">Modern<br> Art Gallery</h1>
+            </div>
+            <div class="top-right">
 
-    Modern Art Gallery
-
-    The arts in the collection of the Modern Art Gallery all started
-    from a spark of inspiration. Will these pieces inspire you? Visit
-    us and find out.
-
-    Our location
+                <p class="ff-outfit fs-500 text-gray">The arts in the collection of the Modern Art Gallery all started
+                from a spark of inspiration. Will these pieces inspire you? Visit
+                us and find out.</p>
+                <button class="button1 flex bg-black uppercase" onclick="window.location.href='location.html'">Our location<img src="./assets/icon-arrow-right.svg" class="bg-gold"></button>
+            </div>
+        </div> 
+    </header>
 
     Your day at the gallery
 
