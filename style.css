@@ -205,16 +205,19 @@ button {
     font-weight: 800;
     line-height: 24px;
     letter-spacing: 3.63636px;
-    color: hsl( var(--clr-white) );
     align-items: center;
     justify-content: space-between;
-    padding-right: 0;
-    padding-left: 1.9rem;
     cursor: pointer;
     border: none;
-    -webkit-transition: ease-out 0.3s;
-    -moz-transition: ease-out 0.3s;
-    transition: ease-out 0.3s;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.button1 {
+    color: hsl( var(--clr-white) );
+    padding-right: 0;
+    padding-left: 1.9rem;
 }
 
 .button1 > img {
@@ -225,13 +228,21 @@ button {
 .button1:focus {
     background-color: hsl( var(--clr-black) );
     box-shadow: inset 14rem 0 0 0 hsl( var(--clr-gold) );
-    transition: ease-out .3s ; 
+    transition: ease-out .4s ; 
 }
 
 .button1:hover > img, 
 .button1:focus > img {
     background-color: hsl( var(--clr-black) );
-    transition: step-end .25s;
+    transition: step-end .4s;
+}
+
+.button2 {
+    position: absolute;
+    z-index: 1000;
+    color: hsl( var(--clr-white) );
+    padding-left: 0;
+    padding-right: 1.9rem;
 }
 
 .button2 > img {
@@ -240,15 +251,15 @@ button {
 
 .button2:hover,
 .button2:focus {
-    background-color: hsl( var(--clr-gold) );
-    box-shadow: inset 14rem 0 0 0 hsl( var(--clr-black) );
-    transition: ease-out .3s ;
+    background-color: hsl( var(--clr-black) );
+    box-shadow: inset 16.25rem 0 0 0 hsl( var(--clr-gold) );
+    transition: ease-out .4s ;
 }
 
 .button2:hover > img, 
 .button2:focus > img {
-    background-color: hsl( var(--clr-gold) );
-    transition: step-end .25s;
+    background-color: hsl( var(--clr-black) );
+    transition: step-end .4s;
 }
 
 
@@ -461,16 +472,26 @@ h1 {
 
 .container > h3 {
     margin-bottom: 2.375rem;
+    font-weight: 700;
 }
 
-.logos {
+.logosP1, .logosP2 {
     margin-top: 2.5rem;
     gap: 1.25rem;
 }
 
-.hover:hover {
+.logosP2 {
+    filter: invert(100%);
+}
+
+.hoverP1:hover {
     cursor: pointer;
     filter: invert(57%) sepia(42%) saturate(363%) hue-rotate(332deg) brightness(145%) contrast(87%);
+}
+
+.hoverP2:hover {
+    cursor: pointer;
+    filter: invert(100%);
 }
 
 @media (min-width: 35rem) {
@@ -491,7 +512,7 @@ h1 {
         max-width: 17.5rem;
     }
 
-    .logos {
+    .logosP1, .logosP2 {
         margin-top: 0;
     }
 }
@@ -500,5 +521,87 @@ h1 {
     .container {
         max-width: 1400px;
         margin-inline: auto;
+    }
+
+    .container > p {
+        max-width: 23rem;
+    }
+}
+
+/* -------- */
+/*  Map     */
+/* -------- */
+
+#map {
+    width: 100%;
+    height: 34.375rem;
+}
+
+.leaflet-tile {
+    filter: saturate(0%) !important;
+}
+
+/* ------- */
+
+.location {
+    flex-direction: column;
+    padding-inline: 1rem;
+    padding-top: 3rem;
+}
+
+.location > h1 {
+    padding-bottom: 3rem;
+    width: 343px;
+}
+
+address {
+    font-style: normal;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.address-open > p {
+    padding-bottom: 3.5rem;
+}
+
+@media (min-width:35rem) {
+    .location {
+        flex-direction: row;
+        padding-top: 5.5rem;
+        padding-inline: 2.5rem;
+    }
+
+    .location > h1 {
+        margin-right: 4.25rem;
+        width: 223px;
+    }
+
+    .address-open {
+        max-width: 25rem;
+    }
+
+    .address-open > p {
+        padding-bottom: 5rem;
+    }
+}
+
+@media (min-width:1100px) {
+    .location {
+        padding-top: 6.5rem;
+        padding-inline: 10.3125rem;        
+    }
+
+    .location > h1 {
+        margin-right: 14rem;
+        width: 350px;
+
+    }
+
+    .address-open {
+        max-width: 25rem;
+    }
+
+    .address-open > p {
+        padding-bottom: 5rem;
     }
 }
